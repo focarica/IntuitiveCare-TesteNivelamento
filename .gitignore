@@ -34,3 +34,7 @@ poetry.lock
 
 
 .vscode/
+
+*.zip
+*.csv
+Downloads/
