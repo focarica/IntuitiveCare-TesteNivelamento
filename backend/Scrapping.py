@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
-from utils import Utils
+from utils import zipFiles
 import requests
 import os
 
@@ -29,7 +29,7 @@ class Scraper:
                     with open(filename, 'wb') as file:
                         file.write(requests.get(urljoin(URL, link['href'])).content)
         
-            Utils.zipFiles(paths, "../RolsProcedimento.zip")        
+            zipFiles(paths, "../RolsProcedimento.zip")        
             
     
 Scraper().donwloadFiles()
