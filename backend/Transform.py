@@ -19,7 +19,7 @@ def transform():
                 
                 
     df = pd.DataFrame(tables)
-    df.replace(["", "", None], None, inplace=True)
+    df.replace(["", ""], None, inplace=True)
     df.replace("OD", "Seg. Odontológica", inplace=True)
     df.replace("AMB", "Seg. Ambulatorial", inplace=True)
     
